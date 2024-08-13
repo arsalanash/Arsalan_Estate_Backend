@@ -36,11 +36,13 @@ app.use("/api/auth", authRouter);
 app.use("/api/listing", listingRouter);
 
 // Serve React app
-app.use(express.static(path.join(__dirname, "client", "dist")));
 
-app.get("*", (req, res) => {
-    res.sendFile(path.join(__dirname, "client", "dist", "index.html"));
-});
+//not necessary if deploying separately
+// app.use(express.static(path.join(__dirname, "client", "dist")));
+
+// app.get("*", (req, res) => {
+//     res.sendFile(path.join(__dirname, "client", "dist", "index.html"));
+// });
 
 // Error handling middleware
 app.use((err, req, res, next) => {
