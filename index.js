@@ -31,6 +31,9 @@ app.use(
 );
 
 // API Routes
+app.use("/", (req, res) => {
+    res.send("Hello");
+  });
 app.use("/api/user", userRouter);
 app.use("/api/auth", authRouter);
 app.use("/api/listing", listingRouter);
