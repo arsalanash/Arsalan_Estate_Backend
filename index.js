@@ -24,11 +24,11 @@ app.use(cookieParser());
 
 app.use(
     cors({
-        origin: "https://arsalan-estate-frontend.vercel.app",
-        credentials: true, // Allow cookies to be sent from the frontend
+        origin: "*", // Allow requests from any origin
         methods: ["GET", "POST", "PUT", "DELETE"], // Specify allowed methods
     })
 );
+
 
 // API Routes
 app.get("/", (req, res) => {
